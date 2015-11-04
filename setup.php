@@ -1,5 +1,17 @@
 <?php
-$link = new mysqli("mp1.czvcgopvu8oo.us-east-1.rds.amazonaws.com","Snehamp1db","Snehamp1db","MiniProjectData",3306) or die("Error " . mysqli_error($link)); 
+$rds = new Aws\Rds\RdsClient([
+    'version' => 'latest',
+    'region'  => 'us-east-1'
+]);
+
+$result = $rds->describeDBInstances(array(
+    'DBInstanceIdentifier' => 'MP1'
+   
+));
+$endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
+    echo "============\n". $endpoint . "================";
+
+$link = new mysqli($endpoint,"testconnection1","testconnection1","Project1",3306) or die("Error " . mysqli_error($link)); 
 
 $link->query("CREATE TABLE MiniProject1 
 (
