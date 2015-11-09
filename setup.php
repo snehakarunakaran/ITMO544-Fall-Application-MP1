@@ -1,11 +1,13 @@
 <?php
+
+require 'vendor/autoload.php';
 $rds = new Aws\Rds\RdsClient([
     'version' => 'latest',
     'region'  => 'us-east-1'
 ]);
 
 $result = $rds->describeDBInstances(array(
-    'DBInstanceIdentifier' => 'MP1'
+    'DBInstanceIdentifier' => 'db1'
    
 ));
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];

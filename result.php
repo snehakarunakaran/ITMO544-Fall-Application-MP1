@@ -60,7 +60,7 @@ $rds = new Aws\Rds\RdsClient([
 ]);
 
 $result = $rds->describeDBInstances(array(
-    'DBInstanceIdentifier' => 'MP1'
+    'DBInstanceIdentifier' => 'db1'
    
 ));
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
