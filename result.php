@@ -108,7 +108,7 @@ $url	= "gallery.php";
    die();
 
 
-}
+
 
 ?> 
 
