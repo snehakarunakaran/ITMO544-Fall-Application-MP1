@@ -19,7 +19,7 @@ $link->query("CREATE TABLE MiniProject1
 (
 ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 uname VARCHAR(20),
-email VARCHAR(20),
+email VARCHAR(50),
 phoneforsms VARCHAR(20),
 raws3url VARCHAR(256),
 finisheds3url VARCHAR(256),
