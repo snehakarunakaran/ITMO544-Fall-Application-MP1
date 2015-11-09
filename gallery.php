@@ -51,14 +51,7 @@ echo $row['id'] . "Email: " . $row['email'];
 }
 $link->close();
 
-function moveto($url, $statusCode = 303)
-{
-   header('Location: ' . $url, true, $statusCode);
-   die();
-}
-$url	= "gallery.php";
-moveto($url);
-}
+
 ?>
 
 </div>
