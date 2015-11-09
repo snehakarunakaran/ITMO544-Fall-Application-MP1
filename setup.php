@@ -13,7 +13,12 @@ $result = $rds->describeDBInstances(array(
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
     echo "============\n". $endpoint . "================";
 
-$link = new mysqli($endpoint,"testconnection1","testconnection1","Project1",3306) or die("Error " . mysqli_error($link)); 
+$link = new mysqli($endpoint,"testconnection1","testconnection1","Project1",3306) or die("Error " . mysqli_error($link));
+
+$sql = "DROP TABLE IF EXISTS MiniProject1";
+if(!mysqli_query($link, $sql)) {
+   echo "Error : " . mysqli_error($link);
+} 
 
 $link->query("CREATE TABLE MiniProject1 
 (
