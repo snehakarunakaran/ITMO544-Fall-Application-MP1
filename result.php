@@ -103,9 +103,9 @@ while ($row = $res->fetch_assoc()) {
     echo $row['id'] . " " . $row['email']. " " . $row['phoneforsms'];
 }
 $link->close();
-/*$url	= "gallery.php";
+$url	= "gallery.php";
    header('Location: ' . $url, true);
-   die();*/
+   die();
 
 
 
