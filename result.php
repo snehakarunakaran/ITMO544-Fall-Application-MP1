@@ -103,13 +103,11 @@ while ($row = $res->fetch_assoc()) {
     echo $row['id'] . " " . $row['email']. " " . $row['phoneforsms'];
 }
 $link->close();
-function moveto($url, $statusCode = 303)
-{
-   header('Location: ' . $url, true, $statusCode);
-   die();
-}
 $url	= "gallery.php";
-moveto($url);
+   header('Location: ' . $url, true);
+   die();
+
+
 }
 
 ?> 
