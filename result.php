@@ -90,7 +90,7 @@ $jpegfilename = basename($_FILES['userfile']['name']);
 $state=0;
 $stmt->bind_param("ssssssi",$uname,$email,$phoneforsms,$raws3url,$finisheds3url,$jpegfilename,$state);
 if (!$stmt->execute()) {
-    echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+    echo "Execute failed: (" . $stmt->errno0 . ") " . $stmt->error;
 }
 printf("%d Row inserted.\n", $stmt->affected_rows);
 
@@ -108,8 +108,8 @@ $result1 = $sns->listSubscriptions(array(
 
 print_r($result1);
 
-$snsendpoint = $result1['Subscriptions'][0];
-    echo "============\n". test======= $snsendpoint . "================";
+//$snsendpoint = $result1['Subscriptions'][0];
+   // echo "============\n". test======= $snsendpoint . "================";
 
 //$snsendpoint1 = $result1['Subscriptions'][0]['SubscriptionArn']['TopicArn'];
 //echo "============\n". test======= $snsendpoint1 . "================";
