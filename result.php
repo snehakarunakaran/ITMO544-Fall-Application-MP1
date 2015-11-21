@@ -111,13 +111,13 @@ print_r($result1);
 $snsendpoint = $result1['Topics'][0]['TopicArn'];
    echo "============\n".$snsendpoint . "================";
 
-$publish1 = $sns->publish([
+$publish1 = $sns->publish(array(
 
 	'TopicArn'=> $snsendpoint,
 	'Message' => 'Image Inserted Successfully',
 	'Subject' => 'Image Insertion Notification'
 
-]);
+));
 echo "hiii";
 
 //print_r($publish1);
