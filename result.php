@@ -114,8 +114,8 @@ $snsendpoint = $result1['Topics'][0]['TopicArn'];
 $publish1 = $sns->publish(array(
 
 	'TopicArn'=> $snsendpoint,
-	'TargetArn'=>'arn:aws:sns:us-east-1:431676597021:ImageTopicSK:a722bda5-748f-4c81-b927-8e811b5bf9f8',
-	'Message' => 'Image Inserted Successfully'
+	'Message' => 'Image Inserted Successfully',
+	'Subject' => 'Image Insertion Notification'
 
 ));
 
