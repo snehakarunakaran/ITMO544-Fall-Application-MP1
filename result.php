@@ -106,10 +106,10 @@ $result1 = $sns->listTopics(array(
     
 ));
 
-//print_r($result1);
+print_r($result1);
 
 $snsendpoint = $result1['Topics'][0]['TopicArn'];
-   //echo "============\n".$snsendpoint . "================";
+   echo "============\n".$snsendpoint . "================";
 
 $publish1 = $sns->publish(array(
 
