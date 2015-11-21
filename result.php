@@ -113,7 +113,7 @@ $snsendpoint = $result1['Topics'][0]['TopicArn'];
 
 $publish = $sns->publish(array(
 
-	'TopicArn'=> $snsendpoint;
+	'TopicArn'=> $snsendpoint,
 	'Message' => 'Image Inserted Successfully'
 
 ));
