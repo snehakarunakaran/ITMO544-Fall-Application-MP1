@@ -111,13 +111,14 @@ print_r($result1);
 $snsendpoint = $result1['Topics'][0]['TopicArn'];
    echo "============\n".$snsendpoint . "================";
 
-$publish = $sns->publish(array(
+$publish1 = $sns->publish(array(
 
 	'TopicArn'=> $snsendpoint,
 	'Message' => 'Image Inserted Successfully'
 
 ));
 
+print_r($publish1);
 
 $link->real_query("SELECT * FROM MiniProject1");
 $res = $link->use_result();
