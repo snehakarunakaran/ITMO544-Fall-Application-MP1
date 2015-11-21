@@ -108,8 +108,8 @@ $result1 = $sns->listTopics(array(
 
 print_r($result1);
 
-//$snsendpoint = $result1['Subscriptions'][0];
-   // echo "============\n". test======= $snsendpoint . "================";
+$snsendpoint = $result1['Topics'][0]['TopicArn'];
+   echo "============\n".$snsendpoint . "================";
 
 //$snsendpoint1 = $result1['Subscriptions'][0]['SubscriptionArn']['TopicArn'];
 //echo "============\n". test======= $snsendpoint1 . "================";
