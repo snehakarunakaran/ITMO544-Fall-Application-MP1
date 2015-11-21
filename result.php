@@ -96,6 +96,22 @@ printf("%d Row inserted.\n", $stmt->affected_rows);
 
 $stmt->close();
 
+$sns = new Aws\Sns\SnsClient([
+			'version' => 'latest',
+			'region'  => 'us-east-1'
+		]);
+
+
+$result1 = $sns->listSubscriptions(array(
+    
+));
+
+print_r($result1);
+
+$snsendpoint = $result1['Subscriptions'][0]['TopicARN'];
+    echo "============\n". $snsendpoint . "================";
+
+
 $link->real_query("SELECT * FROM MiniProject1");
 $res = $link->use_result();
 echo "Result set order...\n";
@@ -103,9 +119,9 @@ while ($row = $res->fetch_assoc()) {
     echo $row['id'] . " " . $row['email']. " " . $row['phoneforsms'];
 }
 $link->close();
-$url	= "gallery.php";
+/*$url	= "gallery.php";
    header('Location: ' . $url, true);
-   die();
+   die();*/
 
 
 
