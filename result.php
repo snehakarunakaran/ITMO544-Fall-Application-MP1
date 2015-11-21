@@ -108,8 +108,8 @@ $result1 = $sns->listSubscriptions(array(
 
 print_r($result1);
 
-$snsendpoint = $result1['Subscriptions'][0]['TopicARN'];
-    echo "============\n". $snsendpoint . "================";
+$snsendpoint = $result1['Subscriptions'][4]['TopicArn'];
+    echo "============\n". test======= $snsendpoint . "================";
 
 
 $link->real_query("SELECT * FROM MiniProject1");
