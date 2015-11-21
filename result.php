@@ -102,7 +102,7 @@ $sns = new Aws\Sns\SnsClient([
 		]);
 
 
-$result1 = $sns->listSubscriptions(array(
+$result1 = $sns->listTopics(array(
     
 ));
 
